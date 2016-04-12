@@ -1,0 +1,9 @@
+<div flex layout="column">
+    <h4>{{$fam.family.name}}</h4>
+    
+    <md-list>
+        <md-list-item ng-repeat="member in $fam.family.members" >
+            <family-member family-member="member"></family-member>
+        </md-list-item>
+    </md-list>
+</div>

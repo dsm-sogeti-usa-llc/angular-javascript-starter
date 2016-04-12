@@ -1,0 +1,11 @@
+<md-sidenav class="md-sidenav-left" md-component-id="left" md-is-locked-open="$sideNav.isDockedOpen">
+    <md-content role="navigation">
+        <ul>
+            <li ng-repeat="page in $sideNav.pages">
+                <md-button ng-class="{'active': $sideNav.isActive(page)}" ng-click="$sideNav.goToPage(page)" >
+                    {{page.title}}
+                </md-button>
+            </li>
+        </ul>
+    </md-content>
+</md-sidenav>

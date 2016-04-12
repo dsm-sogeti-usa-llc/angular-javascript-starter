@@ -1,0 +1,18 @@
+<div layout="column" flex>
+    <ng-form name="$ctrl.form" >
+        <md-input-container>
+            <label>Search</label>
+            <input ng-model="$ctrl.search" type="text" />
+        </md-input-container>
+
+        <md-button ng-click="$ctrl.submit()">
+            search
+        </md-button>
+    </ng-form>
+    
+    <md-list>
+        <md-list-item ng-repeat="topic in $ctrl.topics | filter: $ctrl.search" >
+            {{topic}}
+        </md-list-item>
+    </md-list>
+</div>
